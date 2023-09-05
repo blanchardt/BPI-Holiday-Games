@@ -1,0 +1,22 @@
+* {
+  margin:0;
+  padding:0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header { 
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1120px) {
+  img {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  img {
+    width: 100%;
+  }
+}
