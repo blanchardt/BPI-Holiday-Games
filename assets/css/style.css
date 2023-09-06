@@ -22,6 +22,8 @@ header {
 }
 .grid-input {
   border: 1px solid black;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .grid-space {
@@ -29,9 +31,22 @@ header {
   background-color: black;
 }
 
-input {
-  width: 100%;
+.grid-white {
+  height: 23px;
+  border: 1px solid transparent;
+  padding-bottom: 5px;
+  padding-top: 5px;
   text-align: center;
+}
+
+input {
+  width: 95%;
+  text-align: center;
+  border: none;
+}
+
+:focus-visible {
+  outline: none;
 }
 
 @media screen and (max-width: 1120px) {
