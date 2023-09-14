@@ -1,29 +1,70 @@
 $(function() {
     //get the ids of certain elements and store them in variables.
     var submitAnswer = $("#submit");
+    var inputs = $(".input");
+    var dialogBox = $("#result");
+    var dialogText = $("#message");
+    var dialogClue = $("#clue");
 
     //store all the input fields in the grid into an aray.
-    var allInputs = [$("#a1"), $("#a2"), $("#a3"), $("#a5"), $("#a6"), $("#a7"), $("#a8"), $("#a9"), $("#a11"), $("#a12"), $("#a14"), $("#a15"), $("#a16"), $("#a17"), $("#a18"), $("#a19"), $("#a21"), $("#a22"), $("#a23"), $("#a24"), $("#a25"), $("#a26"), $("#a27"), $("#a28"), $("#a29"), $("#a30"), 
-                        $("#b3"), $("#b4"), $("#b5"), $("#b7"), $("#b8"), $("#b10"), $("#b11"), $("#b12"), $("#b13"), $("#b14"), $("#b16"), $("#b17"), $("#b19"), $("#b20"), $("#b21"), $("#b22"), $("#b23"), $("#b24"), $("#b25"), $("#b27"), $("#b28"),
-                        $("#c1"), $("#c2"), $("#c3"), $("#c4"), $("#c5"), $("#c6"), $("#c7"), $("#c8"), $("#c9"), $("#c11"), $("#c12"), $("#c13"), $("#c14"), $("#c15"), $("#c16"), $("#c17"), $("#c18"), $("#c19"), $("#c21"), $("#c22"), $("#c23"), $("#c24"), $("#c25"), $("#c26"), $("#c27"), $("#c28"), 
-                        $("#d5"), $("#d6"), $("#d7"), $("#d9"), $("#d10"), $("#d12"), $("#d13"), $("#d14"), $("#d15"), $("#d16"), $("#d17"), $("#d18"), $("#d20"), $("#d21"), $("#d22"), $("#d23"), $("#e1"), $("#e2"), $("#e3"), $("#e4"), $("#e5"), $("#e6"), $("#e7"), $("#e8"), $("#e9"), $("#e10"), $("#e11"), $("#e13"), $("#e14"), $("#e16"), $("#e17")];
+    var allInputs = [$("#a1")[0], $("#a2")[0], $("#a3")[0], $("#a5")[0], $("#a6")[0], $("#a7")[0], $("#a8")[0], $("#a9")[0], $("#a11")[0], $("#a12")[0], $("#a14")[0], $("#a15")[0], $("#a16")[0], $("#a17")[0], $("#a18")[0], $("#a19")[0], $("#a21")[0], $("#a22")[0], $("#a23")[0], $("#a24")[0], $("#a25")[0], $("#a26")[0], $("#a27")[0], $("#a28")[0], $("#a29")[0], $("#a30")[0], 
+                        $("#b3")[0], $("#b4")[0], $("#b5")[0], $("#b7")[0], $("#b8")[0], $("#b10")[0], $("#b11")[0], $("#b12")[0], $("#b13")[0], $("#b14")[0], $("#b16")[0], $("#b17")[0], $("#b19")[0], $("#b20")[0], $("#b21")[0], $("#b22")[0], $("#b23")[0], $("#b24")[0], $("#b25")[0], $("#b27")[0], $("#b28")[0],
+                        $("#c1")[0], $("#c2")[0], $("#c3")[0], $("#c4")[0], $("#c5")[0], $("#c6")[0], $("#c7")[0], $("#c8")[0], $("#c9")[0], $("#c11")[0], $("#c12")[0], $("#c13")[0], $("#c14")[0], $("#c15")[0], $("#c16")[0], $("#c17")[0], $("#c18")[0], $("#c19")[0], $("#c21")[0], $("#c22")[0], $("#c23")[0], $("#c24")[0], $("#c25")[0], $("#c26")[0], $("#c27")[0], $("#c28")[0], 
+                        $("#d5")[0], $("#d6")[0], $("#d7")[0], $("#d9")[0], $("#d10")[0], $("#d12")[0], $("#d13")[0], $("#d14")[0], $("#d15")[0], $("#d16")[0], $("#d17")[0], $("#d18")[0], $("#d20")[0], $("#d21")[0], $("#d22")[0], $("#d23")[0], $("#e1")[0], $("#e2")[0], $("#e3")[0], $("#e4")[0], $("#e5")[0], $("#e6")[0], $("#e7")[0], $("#e8")[0], $("#e9")[0], $("#e10")[0], $("#e11")[0], $("#e13")[0], $("#e14")[0], $("#e16")[0], $("#e17")[0]];
 
     //put the answer in a string.
     var answer = "bpiworkstoensuresafeguardsareinplacetoprotectnhresidentsreceivingservicesandtoprotectdhhsinvestmentsinnh"
 
-    function checkResult(event) {
+    function checkResult(event, myYes) {
+        event.preventDefault();
         var userAnswer = "";
         for(var i = 0; i < allInputs.length; i++) {
-            userAnswer += allInputs[i][0].value;
+            userAnswer += allInputs[i].value;
         }
         
-        if(userAnswer === answer) {
-            console.log("correct answer");
+        if(userAnswer.toLocaleLowerCase() === answer) {
+            dialogText.attr("style", "color: limegreen");
+            dialogText.text("correct answer");
+            dialogClue.text("Here is your clue!");
+            dialogBox.dialog("open");
         }
         else {
-            console.log("incorrect answer");
+            dialogText.text("incorrect answer");
+            dialogClue.text("");
+            dialogText.attr("style", "color: red");
+            dialogBox.dialog("open");
         }
     }
 
     submitAnswer.on("click", checkResult);
+
+    //
+    inputs.keyup(function (event) {
+        //check if the key was a letter
+        if(event.originalEvent.keyCode >= 65 && event.originalEvent.keyCode <= 90) {
+            var currentIndex = allInputs.indexOf(event.target)
+            //went to https://stackoverflow.com/questions/23888537/auto-tab-to-next-input-field-when-fill-4-characters to learn about how to focus onto another
+            //input field after pressing a button.  Also credited in the readme file.
+            if(allInputs[currentIndex + 1]) {
+                allInputs[currentIndex + 1].focus()
+            }
+        }
+    });
+
+    dialogBox.dialog({
+        modal: true,
+        resizable: false,
+        draggable: false,
+        width: 500,
+        autoOpen: false,
+        buttons: [
+            {
+              text: "Confirm",
+              closeOnEscape: false,
+              click: function() {
+                $(this).dialog( "close" );
+              }
+            }
+          ]
+    });
 });

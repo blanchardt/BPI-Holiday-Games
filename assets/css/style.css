@@ -94,6 +94,19 @@ input {
   color: white;
 }
 
+.ui-dialog-buttonset {
+  text-align: center !important;
+  float: none !important;
+}
+
+.ui-dialog-titlebar {
+  display: none;
+}
+
+.ui-dialog-content {
+  text-align: center;
+}
+
 :focus-visible {
   outline: none;
 }

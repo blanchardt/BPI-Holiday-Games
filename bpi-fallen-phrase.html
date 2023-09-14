@@ -4,11 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>BPI Holiday Game, Fallen Phrase Puzzle</title>
 </head>
 
 <body>
+     <div id="result">
+          <p id="message"></p>
+          <p id="clue"></p>
+     </div>
     <!--Header-->
     <header>
         <img src="./assets/images/snow_cats.png" alt="picture of white cats wearing red and white spiral hats." />
@@ -23,94 +33,94 @@
             <div class="grid-input">
                 <!--Went to https://www.tutorialspoint.com/How-to-limit-the-number-of-characters-allowed-in-form-input-text-field#:~:text=To%20set%20the%20minimum%20character,enters%20the%20field.
                 to figure out how to limit only one character per field.  Also credited in the readme.-->
-                <input type="text" id="a1" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a1" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a2" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a2" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a3" name="fname" maxlength="1">
-            </div>
-
-            <div class="grid-space"></div>
-
-            <div class="grid-input">
-                <input type="text" id="a5" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="a6" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="a7" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="a8" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="a9" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a3" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="a11" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a5" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a12" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a6" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="a7" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="a8" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="a9" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="a14" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a11" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a15" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a12" name="fname" maxlength="1">
+            </div>
+
+            <div class="grid-space"></div>
+
+            <div class="grid-input">
+                 <input class="input" type="text" id="a14" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a16" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a15" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a17" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a16" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a18" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a17" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a19" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a18" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="a19" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
             
             <div class="grid-input">
-                <input type="text" id="a21" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a21" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a22" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a22" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a23" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a23" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a24" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a24" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a25" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a25" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a26" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a26" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a27" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a27" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a28" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a28" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a29" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a29" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="a30" name="fname" maxlength="1">
+                 <input class="input" type="text" id="a30" name="fname" maxlength="1">
             </div>
 
             <!--2nd row-->
@@ -118,82 +128,82 @@
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="b3" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b3" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b4" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b4" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b5" name="fname" maxlength="1">
-            </div>
-
-            <div class="grid-space"></div>
-
-            <div class="grid-input">
-                <input type="text" id="b7" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b8" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b5" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="b10" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b7" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b11" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b12" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b13" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b14" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b8" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="b16" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b10" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b17" name="fname" maxlength="1">
-            </div>
-
-            <div class="grid-space"></div>
-
-            <div class="grid-input">
-                <input type="text" id="b19" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b11" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b20" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b12" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b21" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b13" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b22" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b23" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b24" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="b25" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b14" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="b27" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b16" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="b28" name="fname" maxlength="1">
+                 <input class="input" type="text" id="b17" name="fname" maxlength="1">
+            </div>
+
+            <div class="grid-space"></div>
+
+            <div class="grid-input">
+                 <input class="input" type="text" id="b19" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b20" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b21" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b22" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b23" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b24" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b25" name="fname" maxlength="1">
+            </div>
+
+            <div class="grid-space"></div>
+
+            <div class="grid-input">
+                 <input class="input" type="text" id="b27" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="b28" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
@@ -201,88 +211,88 @@
 
             <!--3rd row-->
             <div class="grid-input">
-                <input type="text" id="c1" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c1" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c2" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c2" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c3" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c3" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c4" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c4" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c5" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c5" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c6" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c6" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c7" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c7" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c8" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c8" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c9" name="fname" maxlength="1">
-            </div>
-
-            <div class="grid-space"></div>
-
-            <div class="grid-input">
-                <input type="text" id="c11" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c12" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c13" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c14" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c15" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c16" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c17" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c18" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="c19" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c9" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="c21" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c11" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c22" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c12" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c23" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c13" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c24" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c14" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c25" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c15" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c26" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c16" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c27" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c17" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="c28" name="fname" maxlength="1">
+                 <input class="input" type="text" id="c18" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c19" name="fname" maxlength="1">
+            </div>
+
+            <div class="grid-space"></div>
+
+            <div class="grid-input">
+                 <input class="input" type="text" id="c21" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c22" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c23" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c24" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c25" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c26" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c27" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="c28" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
@@ -295,61 +305,61 @@
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="d5" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d5" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="d6" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d6" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="d7" name="fname" maxlength="1">
-            </div>
-
-            <div class="grid-space"></div>
-
-            <div class="grid-input">
-                <input type="text" id="d9" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="d10" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d7" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="d12" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d9" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="d13" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="d14" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="d15" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="d16" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="d17" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="d18" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d10" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="d20" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d12" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="d21" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d13" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="d22" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d14" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="d23" name="fname" maxlength="1">
+                 <input class="input" type="text" id="d15" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="d16" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="d17" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="d18" name="fname" maxlength="1">
+            </div>
+
+            <div class="grid-space"></div>
+
+            <div class="grid-input">
+                 <input class="input" type="text" id="d20" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="d21" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="d22" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="d23" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
@@ -362,55 +372,55 @@
 
             <!--5th row-->
             <div class="grid-input">
-                <input type="text" id="e1" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e1" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e2" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e2" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e3" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e3" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e4" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e4" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e5" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e5" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e6" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e6" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e7" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e7" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e8" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e8" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e9" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e9" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e10" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e10" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e11" name="fname" maxlength="1">
-            </div>
-
-            <div class="grid-space"></div>
-
-            <div class="grid-input">
-                <input type="text" id="e13" name="fname" maxlength="1">
-            </div>
-            <div class="grid-input">
-                <input type="text" id="e14" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e11" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
 
             <div class="grid-input">
-                <input type="text" id="e16" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e13" name="fname" maxlength="1">
             </div>
             <div class="grid-input">
-                <input type="text" id="e17" name="fname" maxlength="1">
+                 <input class="input" type="text" id="e14" name="fname" maxlength="1">
+            </div>
+
+            <div class="grid-space"></div>
+
+            <div class="grid-input">
+                 <input class="input" type="text" id="e16" name="fname" maxlength="1">
+            </div>
+            <div class="grid-input">
+                 <input class="input" type="text" id="e17" name="fname" maxlength="1">
             </div>
 
             <div class="grid-space"></div>
@@ -483,11 +493,11 @@
             <div class="grid-white">e</div>
             
             <div class="grid-white"></div>
-            <div class="grid-white"></div>
 
             <div class="grid-white">e</div>
             <div class="grid-white">c</div>
 
+            <div class="grid-white"></div>
             <div class="grid-white"></div>
             <div class="grid-white"></div>
             <div class="grid-white"></div>
@@ -662,9 +672,17 @@
                 <button id="submit" class="btn">Submit</button>
             </div>
         </div>
+        <div>
+        <input class="input" type="Number" maxlength="4" />
+    </div>
+    <div>
+        <input class="input" type="Number" maxlength="4" />
+    </div>
+        <p>test</p>
     </main>
     <!-- Added link to the jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     <script type="text/javascript" src="./assets/js/fallen-puzzle.js"></script>
 </body>
