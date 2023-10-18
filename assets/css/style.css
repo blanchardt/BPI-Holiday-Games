@@ -14,6 +14,10 @@ header {
   width: 100%;
 }
 
+main {
+  padding-top: 5%;
+}
+
 input {
   width: 95%;
   text-align: center;

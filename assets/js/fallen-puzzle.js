@@ -38,7 +38,7 @@ $(function() {
 
     submitAnswer.on("click", checkResult);
 
-    //
+    //after the specific charaters are inputed tab over to the next field.
     inputs.keyup(function (event) {
         //check if the key was a letter
         if(event.originalEvent.keyCode >= 65 && event.originalEvent.keyCode <= 90) {
@@ -48,6 +48,18 @@ $(function() {
             if(allInputs[currentIndex + 1]) {
                 allInputs[currentIndex + 1].focus()
             }
+        }
+        else {
+            event.target.value = "";
+        }
+    });
+
+    //only allow certain characters to be entered in the boxes.
+    inputs.keydown(function (event) {
+        //check if the key was a letter
+        if(!(event.originalEvent.keyCode === 9 || event.originalEvent.keyCode >= 65 && event.originalEvent.keyCode <= 90)) {
+            console.log(event.originalEvent.keyCode);
+            event.preventDefault();
         }
     });
 
