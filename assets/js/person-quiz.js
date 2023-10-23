@@ -6,21 +6,22 @@ $(function() {
     var dialogClue = $("#clue");
 
     //store all the input fields in the grid into an aray.
-    var allInputs = [$("#pic1")[0], $("#pic2")[0], $("#pic3")[0], $("#pic4")[0], $("#pic5")[0], $("#pic6")[0], $("#pic7")[0], $("#pic8")[0]];
+    var allInputs = [$("#person1")[0], $("#person2")[0], $("#person3")[0], $("#person4")[0], $("#person5")[0], $("#person6")[0], $("#person7")[0]];
 
     //put the answer in a string.
-    var answers = [1, 4, 6, 1, 5, 6, 3, 5]
+    var answers = [7, 1, 6, 5, 3, 2, 4]
 
     function checkResult(event, myYes) {
         event.preventDefault();
 
         var allCorrect = true;
+        var totalIncorrect = 0;
 
         //check for any incorrect answers.
         for(var i = 0; i < allInputs.length; i++) {
             if(allInputs[i].value != answers[i]) {
                 allCorrect = false;
-                break;
+                totalIncorrect++;
             }
         }
         
@@ -32,7 +33,7 @@ $(function() {
         }
         else {
             dialogText.text("incorrect answer");
-            dialogClue.text("");
+            dialogClue.text(`You got ${totalIncorrect} incorrect out of ${allInputs.length}`);
             dialogText.attr("style", "color: red");
             dialogBox.dialog("open");
         }
