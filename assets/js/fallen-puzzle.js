@@ -36,8 +36,6 @@ $(function() {
         }
     }
 
-    submitAnswer.on("click", checkResult);
-
     //after the specific charaters are inputed tab over to the next field.
     inputs.keyup(function (event) {
         //check if the key was a letter
@@ -79,4 +77,6 @@ $(function() {
             }
           ]
     });
+
+    submitAnswer.on("click", checkResult);
 });

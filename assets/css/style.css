@@ -24,12 +24,22 @@ input {
   border: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+img {
+  padding-bottom: 4%;
+}
+
 .fallen-puzzle {
   display: grid;
   grid-template-columns: var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size);
   padding: 10px;
   justify-content: center;
 }
+
 .grid-input {
   border: 1px solid black;
   padding-bottom: 5px;
@@ -88,6 +98,7 @@ input {
   border: none;
   border-radius: 25px;
   line-height: 20px;
+  color: #212529 !important;
   padding: 10px 36px;
   font-weight: bold;
   background-color: rgb(182 221 243);
@@ -95,7 +106,7 @@ input {
 
 .btn:hover {
   background-color: rgb(39, 133, 187);
-  color: white;
+  color: white !important;
 }
 
 .ui-dialog-buttonset {
@@ -109,6 +120,21 @@ input {
 
 .ui-dialog-content {
   text-align: center;
+}
+
+.center-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.form-select:focus {
+  border-color: #ced4da !important;
+  box-shadow: none;
 }
 
 :focus-visible {
