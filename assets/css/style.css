@@ -40,6 +40,13 @@ img {
   justify-content: center;
 }
 
+.crossword-puzzle {
+  display: grid;
+  grid-template-columns: var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size);
+  padding: 10px;
+  justify-content: center;
+}
+
 .grid-input {
   border: 1px solid black;
   padding-bottom: 5px;
