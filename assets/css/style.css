@@ -33,6 +33,10 @@ img {
   padding-bottom: 4%;
 }
 
+ol {
+  padding-left: 20px;
+}
+
 .fallen-puzzle {
   display: grid;
   grid-template-columns: var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size) var(--grid--size);

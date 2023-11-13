@@ -47,15 +47,12 @@ $(function() {
                 allInputs[currentIndex + 1].focus()
             }
         }
-        else {
-            event.target.value = "";
-        }
     });
 
     //only allow certain characters to be entered in the boxes.
     inputs.keydown(function (event) {
         //check if the key was a letter
-        if(!(event.originalEvent.keyCode === 9 || event.originalEvent.keyCode >= 65 && event.originalEvent.keyCode <= 90)) {
+        if(!(event.originalEvent.keyCode === 9 || event.originalEvent.keyCode === 8 || event.originalEvent.keyCode === 46 || event.originalEvent.keyCode >= 65 && event.originalEvent.keyCode <= 90)) {
             console.log(event.originalEvent.keyCode);
             event.preventDefault();
         }
