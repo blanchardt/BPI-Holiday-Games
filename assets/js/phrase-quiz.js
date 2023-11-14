@@ -1,4 +1,7 @@
 $(function() {
+    //get the local storage variable for this page.
+    var result = localStorage.getItem("phrase");
+
     //get the ids of certain elements and store them in variables.
     var submitAnswer = $("#submit");
     var inputs = $(".input");
@@ -23,6 +26,32 @@ $(function() {
     var alternateAnswers = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, "teamwork", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "catches", 
                             null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
 
+    //output the clue
+    function correctAnswer() {
+        dialogText.attr("style", "color: limegreen");
+        dialogText.text("correct answer");
+        dialogClue.text("Here is your clue!");
+        dialogBox.dialog("open");
+    }
+
+    //let the know the user got the incorrect answer
+    function incorrectAnswer() {
+        dialogText.text("incorrect answer");
+        dialogClue.text("");
+        dialogText.attr("style", "color: red");
+        dialogBox.dialog("open");
+    }
+
+    //check if user already completed the game or not, they can only complete it once.
+    function checkIfCompleted() {
+        if (result == "correct") {
+            correctAnswer();
+        }
+        else if (result == "wrong") {
+            incorrectAnswer();
+        }
+    }
+
     //check the results to see if the user got the correct answers.
     function checkResult(event, myYes) {
         event.preventDefault();
@@ -36,16 +65,12 @@ $(function() {
         }
         
         if(allCorrect) {
-            dialogText.attr("style", "color: limegreen");
-            dialogText.text("correct answer");
-            dialogClue.text("Here is your clue!");
-            dialogBox.dialog("open");
+            localStorage.setItem("phrase", "correct");
+            correctAnswer();
         }
         else {
-            dialogText.text("incorrect answer");
-            dialogClue.text("");
-            dialogText.attr("style", "color: red");
-            dialogBox.dialog("open");
+            localStorage.setItem("phrase", "wrong");
+            incorrectAnswer();
         }
     }
 
@@ -75,17 +100,10 @@ $(function() {
         resizable: false,
         draggable: false,
         width: 500,
-        autoOpen: false,
-        buttons: [
-            {
-              text: "Confirm",
-              closeOnEscape: false,
-              click: function() {
-                $(this).dialog( "close" );
-              }
-            }
-          ]
+        autoOpen: false
     });
 
     submitAnswer.on("click", checkResult);
+
+    checkIfCompleted();
 });
