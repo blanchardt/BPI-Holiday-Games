@@ -21,7 +21,7 @@ $(function() {
                         "a", "fool", "and", "his", "money", "is", "soon", "parted", "the", "early", "bird", "gets", "the", "worm", "a", "chain", "is", "only", "as", "strong", "as", "its", "weakest", "link", 
                         "a", "stopped", "clock", "is", "right", "twice", "a", "day"];
     var alternateAnswers = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, "teamwork", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "catches", 
-                            null, null, null, null, null, null, null, null, null, null, null, null, null, "broken", null, null, null, null, null, null];
+                            null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
 
     //check the results to see if the user got the correct answers.
     function checkResult(event, myYes) {

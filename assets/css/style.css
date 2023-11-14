@@ -68,7 +68,7 @@ ol {
   border-width: 2px;
   border: solid;
   border-color: #54d7ee;
-  width: auto;
+  width: 200px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -164,6 +164,14 @@ ol {
 
 .center-text {
   text-align: center;
+}
+
+.restrict-width {
+  max-width: 18%;
+}
+
+.less-restrict-width {
+  max-width: 25%;
 }
 
 .form-select:focus {
