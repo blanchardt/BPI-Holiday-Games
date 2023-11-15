@@ -23,7 +23,7 @@ $(function() {
     var allAnswers = ["time","is", "money", "two", "heads", "are", "better", "than", "one", "there", "is", "no", "i", "in", "team", "look", "before", "you", "leap", 
                         "a", "fool", "and", "his", "money", "is", "soon", "parted", "the", "early", "bird", "gets", "the", "worm", "a", "chain", "is", "only", "as", "strong", "as", "its", "weakest", "link", 
                         "a", "stopped", "clock", "is", "right", "twice", "a", "day"];
-    var alternateAnswers = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, "teamwork", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "catches", 
+    var alternateAnswers = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, "teamwork", null, null, null, null, null, null, null, null, null, "are", null, null, null, null, null, "catches", 
                             null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
 
     //output the clue
