@@ -26,14 +26,14 @@ $(function() {
     //output the clue
     function finalCorrectAnswer() {
         finalDialogText.attr("style", "color: limegreen");
-        finalDialogText.text("correct answer");
-        finalDialogClue.text("Here is your clue!");
+        finalDialogText.text("Congratulations for successfully completing the game.  Here is your clue for the grand prize.");
+        finalDialogClue.text("The nation’s oldest");
         dialogBoxFinal.dialog("open");
     }
 
     //let the user know they got the incorrect answer and all out of tries.
     function finalIncorrectAnswer() {
-        finalDialogText.text("incorrect answer");
+        finalDialogText.text("Sorry, you did not successfully complete this game.  This was the last game.  Hope you enjoyed playing.");
         finalDialogClue.text(`You have ${triesRemaining} tries remaining.`);
         finalDialogText.attr("style", "color: red");
         dialogBoxFinal.dialog("open");
@@ -41,7 +41,7 @@ $(function() {
 
     //let the know the user got the incorrect answer
     function incorrectAnswer(totalCorrect) {
-        dialogResult.text("incorrect answer");
+        dialogResult.text("Sorry, you did not successfully complete this game.  Better luck next try.");
         dialogText.text(`You got ${totalCorrect} correct out of ${allInputs.length}`);
         if (triesRemaining === 1) {
             dialogTries.text(`You have ${triesRemaining} try remaining.`);

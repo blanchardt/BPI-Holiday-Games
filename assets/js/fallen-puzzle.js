@@ -21,14 +21,14 @@ $(function() {
     //output the clue
     function correctAnswer() {
         dialogText.attr("style", "color: limegreen");
-        dialogText.text("correct answer");
-        dialogClue.text("Here is your clue!");
+        dialogText.text("Congratulations for successfully completing the game.  Here is your clue for the grand prize.");
+        dialogClue.text("Items in it representing the Civil War, Spanish–American War, World War I, World War II, and the Vietnam War.");
         dialogBox.dialog("open");
     }
 
     //let the know the user got the incorrect answer
     function incorrectAnswer() {
-        dialogText.text("incorrect answer");
+        dialogText.text("Sorry, you did not successfully complete this game.  Better luck on the next game.");
         dialogClue.text("");
         dialogText.attr("style", "color: red");
         dialogBox.dialog("open");
