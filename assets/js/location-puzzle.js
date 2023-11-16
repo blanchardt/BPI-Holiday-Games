@@ -45,17 +45,16 @@ $(function() {
     function checkResult(event, myYes) {
         event.preventDefault();
 
-        var allCorrect = true;
+        var totalCorrect = 0;
 
         //check for any incorrect answers.
         for(var i = 0; i < allInputs.length; i++) {
-            if(allInputs[i].value != answers[i]) {
-                allCorrect = false;
-                break;
+            if(allInputs[i].value == answers[i]) {
+                totalCorrect++;
             }
         }
         
-        if(allCorrect) {
+        if(totalCorrect >= 6) {
             localStorage.setItem("location", "correct");
             correctAnswer();
         }

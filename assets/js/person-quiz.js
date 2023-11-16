@@ -68,7 +68,6 @@ $(function() {
     function checkResult(event, myYes) {
         event.preventDefault();
 
-        var allCorrect = true;
         var totalCorrect = 0;
 
         //check for any incorrect answers.
@@ -81,7 +80,7 @@ $(function() {
             }
         }
         
-        if(allCorrect) {
+        if(totalCorrect >= 4) {
             localStorage.setItem("baby", "correct");
             finalCorrectAnswer();
         }
