@@ -6,6 +6,7 @@ $(function() {
     var submitAnswer = $("#submit");
     var dialogBox = $("#result");
     var dialogText = $("#message");
+    var dialogPreClue = $("#pre-clue");
     var dialogClue = $("#clue");
 
     //store all the input fields in the grid into an aray.
@@ -17,7 +18,8 @@ $(function() {
     //output the clue
     function correctAnswer() {
         dialogText.attr("style", "color: limegreen");
-        dialogText.text("Congratulations for successfully completing the game.  Here is your clue for the grand prize.");
+        dialogText.text("Congratulations for successfully completing the game.");
+        dialogPreClue.text("Here is your clue for the grand prize.");
         dialogClue.text("1814");
         dialogBox.dialog("open");
     }

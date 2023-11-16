@@ -15,6 +15,7 @@ $(function() {
     var dialogTries = $("#tries");
     var dialogBox = $("#result");
     var finalDialogText = $("#final-message");
+    var finalDialogPreClue = $("#pre-clue");
     var finalDialogClue = $("#clue");
 
     //store all the input fields in the grid into an aray.
@@ -26,7 +27,8 @@ $(function() {
     //output the clue
     function finalCorrectAnswer() {
         finalDialogText.attr("style", "color: limegreen");
-        finalDialogText.text("Congratulations for successfully completing the game.  Here is your clue for the grand prize.");
+        finalDialogText.text("Congratulations for successfully completing the game.");
+        finalDialogPreClue.text("Here is your clue for the grand prize.");
         finalDialogClue.text("The nation’s oldest");
         dialogBoxFinal.dialog("open");
     }
@@ -34,7 +36,7 @@ $(function() {
     //let the user know they got the incorrect answer and all out of tries.
     function finalIncorrectAnswer() {
         finalDialogText.text("Sorry, you did not successfully complete this game.  This was the last game.  Hope you enjoyed playing.");
-        finalDialogClue.text(`You have ${triesRemaining} tries remaining.`);
+        finalDialogPreClue.text(`You have ${triesRemaining} tries remaining.`);
         finalDialogText.attr("style", "color: red");
         dialogBoxFinal.dialog("open");
     }
