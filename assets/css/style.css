@@ -160,6 +160,27 @@ ol {
   text-align: center;
 }
 
+.box {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 150px;
+    margin: 1%;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #093145;
+    text-align: center;
+    line-height: 150px;
+    font-size: 130px;
+    color: whitesmoke;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
 .center-content {
   display: flex;
   flex-wrap: wrap;
@@ -189,27 +210,6 @@ ol {
 
 :focus-visible {
   outline: none;
-}
-
-.box {
-    display: block;
-    float: left;
-    width: 100%;
-    height: 150px;
-    margin: 1%;
-    cursor: pointer;
-    object-fit: cover;
-    border-radius: 8px;
-    background-color: #093145;
-    text-align: center;
-    line-height: 150px;
-    font-size: 130px;
-    color: whitesmoke;
-}
-
-.row {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
 }
 
 @media screen and (max-width: 1120px) {
