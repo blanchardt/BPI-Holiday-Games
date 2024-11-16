@@ -78,11 +78,11 @@ $(function() {
     }
 
     //output the clue
-    function showResult() {
+    function showResult(total) {
         dialogText.attr("style", "color: limegreen");
         dialogText.text("Thank you for playing the game.");
         dialogPreClue.text("Here is your score.");
-        dialogClue.text(result);
+        dialogClue.text(total);
         dialogBox.dialog("open");
     }
 
@@ -95,7 +95,7 @@ $(function() {
     //check if user already completed the game or not, they can only complete it once.
     function checkIfCompleted() {
         if ($.isNumeric(result)) {
-            showResult();
+            showResult(result);
         }
         else {
             shuffle();
@@ -109,7 +109,7 @@ $(function() {
     function submitResult() {
         //Reveal the players score
         localStorage.setItem("matching", score);
-        showResult();
+        showResult(score);
     }
 
     //only allow certain characters to be entered in the boxes.
