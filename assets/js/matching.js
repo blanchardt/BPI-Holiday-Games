@@ -81,8 +81,8 @@ $(function() {
     function showResult(total) {
         dialogText.attr("style", "color: limegreen");
         dialogText.text("Thank you for playing the game.");
-        dialogPreClue.text("Here is your score.");
-        dialogClue.text(total);
+        dialogPreClue.text("Please Screenshot your score before exiting.");
+        dialogClue.text("Score: " + total);
         dialogBox.dialog("open");
     }
 
